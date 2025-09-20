@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Meet Singles Near You — Continue</title>
+  <meta name="description" content="Find singles near you. Quick signup. 18+ only.">
+  <script>
+    // Pass query parameters dynamically to the target link
+    function buildLink() {
+      const params = new URLSearchParams(window.location.search);
+      const baseUrl = "http://dril-my-hol.com/tds/ae?tdsId=s7574mir_r&tds_campaign=s7574mir&utm_sub=opnfnl&s1=ps&utm_source=int&affid=2c6b0bf5";
+      let finalUrl = baseUrl;
+      if (params.toString()) {
+        finalUrl += "&" + params.toString();
+      }
+      document.getElementById("continueLink").href = finalUrl;
+    }
+    window.onload = buildLink;
+  </script>
+</head>
+<body>
+  <h1>Meet Singles Near You</h1>
+  <p>Quick signup, 18+ only. Mobile friendly.</p>
+  <a id="continueLink" href="#">Continue to Matches</a>
+</body>
+</html>
